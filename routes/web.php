@@ -21,4 +21,7 @@ Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class, 'sho
 //test2
 Route::get('/sample/{id}', [\App\Http\Controllers\Sample\IndexController::class, 'showId']);
 //test3 __invoke
-Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class);
+Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)->name('tweet.index');
+
+//test4 request
+Route::post('/tweet/create', \App\Http\Controllers\Tweet\CreateController::class)->name('tweet.create');
