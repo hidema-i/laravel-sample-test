@@ -18,7 +18,7 @@ class IndexController extends Controller
     {
         //マジックメソッド__invokeのtest
         // return view('tweet.index', ['name' => 'laravel']);
-        $tweets = Tweet::all();
+        $tweets = Tweet::orderBy('created_at', 'DESC')->get();
         //dd($tweets);
         return view('tweet.index')
             ->with('tweets', $tweets);
