@@ -15,3 +15,5 @@ yarn-error.log
 /docker
 composer.lock
 composer.json
+/public/css
+/public/js
