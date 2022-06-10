@@ -17,6 +17,8 @@ class TweetFactory extends Factory
     public function definition()
     {
         return [
+            //UserId
+            'user_id' => 1,  //dfaultを１とする
             //content 100文字のダミーtext
             'content' => $this->faker->realText(100)
         ];
