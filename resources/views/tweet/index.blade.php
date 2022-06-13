@@ -4,5 +4,6 @@
       Tweetアプリ
     </h2>
   <x-tweet.form.post></x-tweet.form.post>
-  </x-layout.single>
+  <x-tweet.list :tweets="$tweets"></x-tweet.list>
+</x-layout.single>
 </x-layout>
