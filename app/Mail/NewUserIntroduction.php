@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class NewUserIntroduction extends Mailable
+class NewUserIntroduction extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -16,6 +16,7 @@ class NewUserIntroduction extends Mailable
     public $subject = '新しいユーザーが追加されました!';
     public User $toUser;
     public User $newUser;
+
     /**
      * Create a new message instance.
      *
